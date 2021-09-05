@@ -12,9 +12,17 @@ export const getFeaturedGame = async () => {
   return axiosResponse.data;
 };
 
-export const getDetailVoucher = async (id) => {
+export const getDetailVoucher = async (id: string) => {
   const URL = `players/${id}/detail`;
 
+  const response = await axios.get(`${ROOT_API}/${API_VERSION}/${URL}`);
+  const axiosResponse = response.data;
+
+  return axiosResponse.data;
+};
+
+export const getGameCategory = async () => {
+  const URL = 'players/category';
   const response = await axios.get(`${ROOT_API}/${API_VERSION}/${URL}`);
   const axiosResponse = response.data;
 

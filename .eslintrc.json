@@ -23,7 +23,10 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
         "react/react-in-jsx-scope": "off",
         "jsx-a11y/anchor-is-valid": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
         "react/jsx-props-no-spreading": "off",
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        "jsx-a11y/label-has-associated-control": "off"
     }
 }

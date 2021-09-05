@@ -39,7 +39,6 @@ export default function EditProfile() {
                 <button
                   type="submit"
                   className="btn btn-save fw-medium text-lg text-white rounded-pill"
-                  role="button"
                 >
                   Save My Profile
                 </button>

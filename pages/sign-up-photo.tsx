@@ -9,8 +9,8 @@ import { CategoryTypes } from '../services/data-types';
 export default function SignUpPhoto() {
   const [categories, setCategories] = useState([]);
   const [favorite, setFavorite] = useState('');
-  const [image, setImage] = useState('');
-  const [imagePreview, setImagePreview] = useState(null);
+  const [image, setImage] = useState<any>('');
+  const [imagePreview, setImagePreview] = useState<any>(null);
   const [localForm, setLocalForm] = useState({
     name: '',
     email: '',
@@ -73,7 +73,7 @@ export default function SignUpPhoto() {
                     name="avatar"
                     accept="image/png, image/jpeg"
                     onChange={(event) => {
-                      const img = event.target.files[0];
+                      const img = event.target.files![0];
                       setImagePreview(URL.createObjectURL(img));
                       return setImage(img);
                     }}
@@ -120,7 +120,7 @@ export default function SignUpPhoto() {
               </button>
               <a
                 className="btn btn-tnc text-lg color-palette-1 text-decoration-underline pt-15"
-                href="/#"
+                href="/"
                 role="button"
               >
                 Terms &

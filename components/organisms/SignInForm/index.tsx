@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
@@ -10,7 +10,8 @@ export default function SignInForm() {
   const [password, setPassword] = useState('');
   const router = useRouter();
 
-  const onSubmit = async () => {
+  const submitForm = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const data = {
       email,
       password,
@@ -32,7 +33,7 @@ export default function SignInForm() {
   };
 
   return (
-    <>
+    <form onSubmit={submitForm}>
       <div className="pt-50">
         <label className="form-label text-lg fw-medium color-palette-1 mb-10">
           Email Address
@@ -63,8 +64,7 @@ export default function SignInForm() {
       <div className="button-group d-flex flex-column mx-auto pt-50">
         <button
           className="btn btn-sign-in fw-medium text-lg text-white rounded-pill mb-16"
-          type="button"
-          onClick={onSubmit}
+          type="submit"
         >
           Continue to Sign In
 
@@ -77,6 +77,6 @@ export default function SignInForm() {
           </a>
         </Link>
       </div>
-    </>
+    </form>
   );
 }

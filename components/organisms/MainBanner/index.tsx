@@ -37,12 +37,12 @@ export default function index() {
               players menjadi pemenang sejati
             </p>
             <div className="d-flex flex-lg-row flex-column gap-4">
-              <a className="btn btn-get text-lg text-white rounded-pill" href="#feature" role="button">
+              <a className="btn btn-get text-lg text-white rounded-pill" href="/" role="button">
                 Get
                 Started
 
               </a>
-              <a className="btn-learn text-lg color-palette-1 my-auto text-center" href="/#" role="button">
+              <a className="btn-learn text-lg color-palette-1 my-auto text-center" href="/" role="button">
                 Learn
                 More
 
